@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import Food from './components/01_component/Food';
+import Menu from './components/01_component/Menu';
+import Comment from './components/02_props/Comment';
+import CommentList from './components/02_props/CommentList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Menu />*/}
+      {/* <Comment />*/}
+      <CommentList />
     </div>
   );
 }
