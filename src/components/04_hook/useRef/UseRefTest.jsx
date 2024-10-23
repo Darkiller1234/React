@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React from "react";
 
-//제출버튼을 클릭시 alert를 이용하여 이름과 성별을 보여주는 팝업을 나타나게 하자.
-const SignUp = () => {
-    // let name = "", gender = "";
-    const [name, setName] = useState("");
+const UserRefTest = () => {
+
+
+
+
+    const [name, setName] = useState("Hong Gil Dong");
     const [gender, setGender] = useState("man");
+    
 
     const handleChangeName = (ev) => {
         setName(ev.target.value);
@@ -16,17 +19,23 @@ const SignUp = () => {
 
     const handleSubmit = (ev) => {
         alert(`이름 : ${name}, 성별 : ${gender}`);
-
         ev.preventDefault();
     }
+
+    const handleReset = () => {
+        setName("")
+        setGender("man")
+    }
+
+
 
     return (
         <form onSubmit={handleSubmit}>
             <label>
                 이름 : 
-                <input type="text" value={name} onChange={handleChangeName} />
+                <input type="text" value={name} onChange={handleChangeName}/>
             </label>
-            <br /><br />
+            <br />
             <label>
                 성별 : 
                 <select value={gender} onChange={handleChangeGender}>
@@ -34,10 +43,10 @@ const SignUp = () => {
                     <option value="woman">여자</option>
                 </select>
             </label>
-            <br /><br />
-            <button type='submit'>제출</button>
+            <button type="submit">제출</button>
+            <button type="button" onClick={handleReset}>초기화</button>
         </form>
     )
 }
 
-export default SignUp
+export default UserRefTest;
