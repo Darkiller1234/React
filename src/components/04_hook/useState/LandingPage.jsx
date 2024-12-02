@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Toolbar from './Toolbar'
+import Toolbar from './ToolBar'
 
 /*
     여러컴포넌트에 걸처서 사용하는 데이터가 있다면 이를 포괄하고있는 상위컴포넌트에
